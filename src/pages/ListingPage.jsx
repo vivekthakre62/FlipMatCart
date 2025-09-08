@@ -81,7 +81,7 @@ export default function ListingPage() {
     }
   };
 
-  const isInCart = (id) => cart.some((item) => item.product?.id == id);
+  const isInCart = (id) => cart.some((item) => item.product?.id === Number(id));
 
   const buyProduct = async (product) => {
     await addToCart(product);

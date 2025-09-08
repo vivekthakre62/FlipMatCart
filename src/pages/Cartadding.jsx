@@ -47,7 +47,7 @@ export default function CartAddingPage() {
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.post("http://localhost:8080/api/products/save", data, {
+       await axios.post("http://localhost:8080/api/products/save", data, {
         headers: {
           Authorization: `Bearer ${token}`, // 👈 JWT token required
           "Content-Type": "multipart/form-data",
